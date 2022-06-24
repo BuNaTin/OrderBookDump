@@ -1,3 +1,6 @@
-#include "lib.h"
+#include "MarketDepth.h"
 
-int main() { printHello(); }
+int main() {
+    t_market_depth *bitcoin_usd = create_market_depth();
+    return 0;
+}

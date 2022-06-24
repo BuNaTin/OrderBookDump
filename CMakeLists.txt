@@ -11,11 +11,13 @@ set(INC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/includes)
 set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs)
 
 set(PUBLIC_INCLUDES
-    ${INC_DIR}/lib.h
+    ${INC_DIR}/MarketDepth.h
+    ${INC_DIR}/CheckError/ce.h
 )
 
 set(PRIVATE_SOURCES
-    ${SRC_DIR}/lib.c
+    ${SRC_DIR}/MarketDepth.c
+    ${SRC_DIR}/CheckError/ce.c
 )
 
 set(ALL_INCLUDES
