@@ -2,6 +2,8 @@
 
 #include <stdlib.h>
 
+#include "CheckError/ce.h"
+
 t_market_depth_row *
 create_market_depth_row(int user_id, int amount, int price) {
     t_market_depth_row *new_row =
@@ -14,7 +16,7 @@ create_market_depth_row(int user_id, int amount, int price) {
 
 char clear_market_depth_row(t_market_depth_row *row) {
     free(row);
-    return 0;
+    return CE_OK;
 }
 
 t_market_depth *create_market_depth() {
@@ -34,7 +36,7 @@ char clear_market_depth(t_market_depth *market) {
         market = market->next;
         free(tmp);
     }
-    return 0;
+    return CE_OK;
 }
 
 void insert_to_market_depth(t_market_depth_row *row) {}
